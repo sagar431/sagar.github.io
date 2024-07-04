@@ -17,6 +17,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
     </header>
 
     <main>
@@ -38,27 +39,45 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Project 1</h3>
-                <p>Description of your first AI project.</p>
+            <div id="projectFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="nlp">NLP</button>
+                <button class="filter-btn" data-filter="cv">Computer Vision</button>
             </div>
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of your second AI project.</p>
+            <div id="projectList">
+                <div class="project" data-category="ml">
+                    <h3>Project 1</h3>
+                    <p>Description of your first AI project (Machine Learning).</p>
+                </div>
+                <div class="project" data-category="nlp">
+                    <h3>Project 2</h3>
+                    <p>Description of your second AI project (NLP).</p>
+                </div>
+                <div class="project" data-category="cv">
+                    <h3>Project 3</h3>
+                    <p>Description of your third AI project (Computer Vision).</p>
+                </div>
+                <!-- Add more projects as needed -->
             </div>
-            <!-- Add more projects as needed -->
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/yourusername">Your GitHub</a></p>
+            <form id="contactForm">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="formStatus"></p>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
